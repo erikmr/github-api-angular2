@@ -10,7 +10,14 @@ import { GithubService } from './services/github.service'
   providers: [GithubService]
 })
 export class AppComponent {
+  usernameToFind: string=""
+  constructor(){
+    this.usernameToFind = "joe-vella" 
 
+  }
+  search(com : any){
+    com.search(this.usernameToFind)
+  }
 }
 // export class AppComponent {
 //   title = 'Servira si aplicamos lo mismo de ionic?';

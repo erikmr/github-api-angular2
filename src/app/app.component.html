@@ -14,9 +14,20 @@
     <div id="navbar" class="navbar-collapse collapse">
       <form class="navbar-form navbar-right">
         <div class="form-group">
-          <input type="text" placeholder="username" class="form-control">
+          <input 
+          type="text" 
+          placeholder="username" 
+          class="form-control"
+          name = "username"
+          [(ngModel)] = "usernameToFind"
+          >
         </div>
-        <button type="submit" class="btn btn-success">Search</button>
+        <button 
+          class="btn btn-success"
+          (click) = "search(gh)"
+          >
+
+          Search</button>
       </form>
     </div><!--/.navbar-collapse -->
   </div>
@@ -25,7 +36,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
-      <app-github></app-github>
+      <app-github #gh ></app-github>
     </div>
   </div>
 </div>
