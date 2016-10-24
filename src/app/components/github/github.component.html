@@ -1,19 +1,3 @@
-<!--<div class="row">
-    <div class="col-md-12">
-        <form #f="ngForm">
-            <div class="form-group">
-                <input 
-                type="text" 
-                class="form-control"
-                name="username"
-                placeholder="username" 
-                [(ngModel)]="username" 
-                (keyup.enter)="search()"></div>
-        </form>
-    </div>
-</div>-->
-
-
 <div *ngIf="user">
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -23,7 +7,7 @@
         <div class="row">
             <div class="col-md-4">
                 <img class="img-thumbnail" src="{{user.avatar_url}}" alt=""> <br> 
-                <p class="label label-primary"> {{user.name}}</p>
+                <h3><span class="label label-primary"> {{user.name}}</span></h3>
             </div>
             <div class="col-md-8">
                 <div class="stats">
@@ -34,11 +18,11 @@
                 </div>
                 <br>
                 <ul class="list-group">
-                    <li class="list-group-item"><strong>UserName:</strong>{{user.login}}</li>
-                    <li class="list-group-item"><strong>Location:</strong>{{user.location}}</li>
-                    <li class="list-group-item"><strong>Email:</strong>{{user.email}}</li>
-                    <li class="list-group-item"><strong>Blog:</strong>{{user.blog}}</li>
-                    <li class="list-group-item"><strong>Member Since:</strong>{{user.created_at}}</li>
+                    <li class="list-group-item"><strong>UserName : </strong>{{user.login}}</li>
+                    <li class="list-group-item"><strong>Location : </strong>{{user.location}}</li>
+                    <li class="list-group-item"><strong>Email : </strong><a href="mailto:{{user.email}}">{{user.email}}</a> </li>
+                    <li class="list-group-item"><strong>Blog : </strong><a href="{{user.blog}}" target="_blank">{{user.blog}}</a></li>
+                    <li class="list-group-item"><strong>Member Since : </strong>{{user.created_at}}</li>
                 </ul>
             </div>
         </div>
@@ -47,7 +31,7 @@
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title">{{user.name}}s Repos</h3>
+            <h3 class="panel-title">Repositories</h3>
         </div>
         <div class="panel-body">
             <div class="row">
@@ -67,6 +51,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
