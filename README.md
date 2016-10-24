@@ -8,11 +8,10 @@ update to Angular 2 Release.
 
 1. Angular 2 release 2.1.0
 
-* Services
-* Components
-* Pipes
+    * Services
+    * Components
+    * Pipes
 
 2. Typescrip
 3. Bootstrap
 4. RxJs
-5. 
